@@ -22,6 +22,16 @@
     uint8arrays "3.0.0"
     zod "^3.14.2"
 
+"@atproto/common-web@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@atproto/common-web/-/common-web-0.3.1.tgz#86f8efb10a4b9073839cee914c6c08a664917cc4"
+  integrity sha512-N7wiTnus5vAr+lT//0y8m/FaHHLJ9LpGuEwkwDAeV3LCiPif4m/FS8x/QOYrx1PdZQwKso95RAPzCGWQBH5j6Q==
+  dependencies:
+    graphemer "^1.4.0"
+    multiformats "^9.9.0"
+    uint8arrays "3.0.0"
+    zod "^3.23.8"
+
 "@atproto/common@*":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@atproto/common/-/common-0.2.0.tgz"
@@ -44,7 +54,16 @@
     one-webcrypto "^1.0.3"
     uint8arrays "3.0.0"
 
-"@atproto/did-resolver@*", "@atproto/did-resolver@^0.1.0":
+"@atproto/crypto@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@atproto/crypto/-/crypto-0.4.2.tgz#07417887ddbd4baae5298d4b9499fc727f261a31"
+  integrity sha512-aeOfPQYCDbhn2hV06oBF2KXrWjf/BK4yL8lfANJKSmKl3tKWCkiW/moi643rUXXxSE72KtWtQeqvNFYnnFJ0ig==
+  dependencies:
+    "@noble/curves" "^1.1.0"
+    "@noble/hashes" "^1.3.1"
+    uint8arrays "3.0.0"
+
+"@atproto/did-resolver@^0.1.0":
   version "0.1.0"
   resolved "https://registry.npmjs.org/@atproto/did-resolver/-/did-resolver-0.1.0.tgz"
   integrity sha512-ztljyMMCqXvJSi/Qqa2zEQFvOm1AUUR7Bybr3cM1BCddbhW46gk6/g8BgdZeDt2sMBdye37qTctR9O/FjhigvQ==
@@ -60,6 +79,15 @@
   integrity sha512-3LV7+4E6S0k8Rru7NBkyDF6Zf6NHVUXVS9d4l9fiXWMC49ghZMjq0vPmz80xjG1rRuFdJFbpRf4ApFciGxLIyQ==
   dependencies:
     "@atproto/common-web" "*"
+
+"@atproto/identity@*":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@atproto/identity/-/identity-0.4.3.tgz#fd387d4f2dd68a514e3d0138009a4b9db7f489fd"
+  integrity sha512-DLXMWh57dHvIeBl+IvC+q20z0IdDZT1awOn84vDyxacL9DfhbiTy/zCUPFEzHyvfrilNG1tDA4zQzURubdFqNg==
+  dependencies:
+    "@atproto/common-web" "^0.3.1"
+    "@atproto/crypto" "^0.4.2"
+    axios "^0.27.2"
 
 "@atproto/lexicon@*", "@atproto/lexicon@^0.1.0":
   version "0.1.0"
@@ -79,21 +107,21 @@
   resolved "https://registry.npmjs.org/@atproto/nsid/-/nsid-0.0.1.tgz"
   integrity sha512-t5M6/CzWBVYoBbIvfKDpqPj/+ZmyoK9ydZSStcTXosJ27XXwOPhz0VDUGKK2SM9G5Y7TPes8S5KTAU0UdVYFCw==
 
-"@atproto/repo@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/@atproto/repo/-/repo-0.1.0.tgz"
-  integrity sha512-O4qs5WfSjEFvUtpOTB4n9cLcK6YP/w/ly6Qxc3S8IFevLGYX58NPPr5zlg3dxs64uLKbWWjzhQM7JAqO44MEKw==
+"@atproto/repo@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@atproto/repo/-/repo-0.2.0.tgz#e2aa5dcffb082dc15d2eb84f7f213d033ce4463a"
+  integrity sha512-F6nPzzw6o4LIfaswJ0T8q2GaiWCQpCGTWgC1tW4S4OBCi+aEIKiW7PuWy0z6/oW5W/UWgWp2yWGFcy1+aaau9A==
   dependencies:
     "@atproto/common" "*"
     "@atproto/crypto" "*"
-    "@atproto/did-resolver" "*"
+    "@atproto/identity" "*"
     "@atproto/lexicon" "*"
     "@atproto/nsid" "*"
     "@ipld/car" "^3.2.3"
     "@ipld/dag-cbor" "^7.0.0"
     multiformats "^9.6.4"
     uint8arrays "3.0.0"
-    zod "^3.14.2"
+    zod "^3.21.4"
 
 "@atproto/uri@*", "@atproto/uri@^0.0.2":
   version "0.0.2"
@@ -198,6 +226,23 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@noble/curves@^1.1.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@noble/curves/-/curves-1.7.0.tgz#0512360622439256df892f21d25b388f52505e45"
+  integrity sha512-UTMhXK9SeDhFJVrHeUJ5uZlI6ajXg10O6Ddocf9S6GjbSBVZsJo88HzKwXznNfGpMTRDyJkqMjNDPYgf0qFWnw==
+  dependencies:
+    "@noble/hashes" "1.6.0"
+
+"@noble/hashes@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.6.0.tgz#d4bfb516ad6e7b5111c216a5cc7075f4cf19e6c5"
+  integrity sha512-YUULf0Uk4/mAA89w+k3+yUYh6NrEvxZa5T6SY3wlMvE2chHkxFUUIDI8/XW1QSC357iA5pSnqt7XEhvFOqmDyQ==
+
+"@noble/hashes@^1.3.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.6.1.tgz#df6e5943edcea504bac61395926d6fd67869a0d5"
+  integrity sha512-pq5D8h10hHBjyqX+cfBm0i8JUXJ0UhczFc4r74zbuT9XgewFo2E3J1cOaGtdZynILNmQ685YWGzGE1Zv6io50w==
 
 "@noble/secp256k1@^1.7.0":
   version "1.7.1"
@@ -699,6 +744,11 @@ github-from-package@0.0.0:
   version "0.0.0"
   resolved "https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz"
   integrity sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==
+
+graphemer@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
+  integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
 has-symbols@^1.0.3:
   version "1.0.3"
@@ -1295,3 +1345,8 @@ zod@^3.14.2:
   version "3.21.4"
   resolved "https://registry.npmjs.org/zod/-/zod-3.21.4.tgz"
   integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
+
+zod@^3.21.4, zod@^3.23.8:
+  version "3.23.8"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
+  integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
